@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zazzy AI - Intelligent Automation Solutions</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Zazzy AI - Your Intelligent Personal Finance Companion</title>
     <style>
         * {
             margin: 0;
@@ -13,11 +12,10 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background-color: #ffffff;
         }
 
         .container {
@@ -26,37 +24,29 @@
             padding: 0 20px;
         }
 
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .nav-container {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
             font-size: 1.8rem;
-            font-weight: 700;
-            color: #2563eb;
+            font-weight: bold;
+            color: white;
             text-decoration: none;
-        }
-
-        .logo i {
-            margin-right: 0.5rem;
-            font-size: 2rem;
         }
 
         .nav-links {
@@ -66,34 +56,18 @@
         }
 
         .nav-links a {
+            color: white;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
             transition: color 0.3s ease;
-            cursor: pointer;
         }
 
         .nav-links a:hover {
-            color: #2563eb;
-        }
-
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .mobile-menu span {
-            width: 25px;
-            height: 3px;
-            background: #333;
-            margin: 3px 0;
-            transition: 0.3s;
+            color: #93c5fd;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
             color: white;
             padding: 120px 0 80px;
             text-align: center;
@@ -108,7 +82,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
 
@@ -119,108 +93,139 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ffffff, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
             background: white;
-            color: #2563eb;
+            color: #1e40af;
             padding: 15px 30px;
-            border-radius: 50px;
             text-decoration: none;
+            border-radius: 50px;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
-        /* Sections */
+        /* Section Styles */
         .section {
             padding: 80px 0;
-            background: white;
-        }
-
-        .section:nth-child(even) {
-            background: #f8fafc;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e293b;
             margin-bottom: 3rem;
+            color: #1e40af;
+            font-weight: 700;
         }
 
         .section-subtitle {
             text-align: center;
             font-size: 1.2rem;
+            margin-bottom: 4rem;
             color: #64748b;
             max-width: 600px;
-            margin: 0 auto 3rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Services Grid */
-        .services-grid {
+        /* Features Grid */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .service-card {
+        .feature-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            color: #2563eb;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
             font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #1e293b;
+            color: white;
         }
 
-        .service-card p {
-            color: #64748b;
-            line-height: 1.7;
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
         }
 
         /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -230,87 +235,84 @@
 
         .about-text {
             font-size: 1.1rem;
-            color: #475569;
             line-height: 1.8;
         }
 
-        .about-image {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            border-radius: 20px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        /* Contact Form */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
             background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #374151;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e5e7eb;
             border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #2563eb;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e40af;
         }
 
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
         }
 
-        .submit-btn {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        /* Beta Section */
+        .beta {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
-            padding: 15px 30px;
+            text-align: center;
+        }
+
+        .beta .section-title {
+            color: white;
+        }
+
+        .beta-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .beta-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+
+        .beta-button {
+            background: white;
+            color: #1e40af;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            width: 100%;
         }
 
-        .submit-btn:hover {
+        .beta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Footer */
         footer {
             background: #1e293b;
             color: white;
-            padding: 3rem 0 2rem;
-            text-align: center;
+            padding: 3rem 0 1rem;
         }
 
         .footer-content {
@@ -322,14 +324,15 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #2563eb;
+            color: #3b82f6;
         }
 
-        .footer-section p,
         .footer-section a {
-            color: #cbd5e1;
+            color: #94a3b8;
             text-decoration: none;
-            line-height: 1.6;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
@@ -337,46 +340,10 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid #374151;
+            text-align: center;
             padding-top: 2rem;
+            border-top: 1px solid #334155;
             color: #94a3b8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .contact-form {
-                margin: 0 20px;
-                padding: 2rem;
-            }
         }
 
         /* Animations */
@@ -391,199 +358,190 @@
             }
         }
 
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease forwards;
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
         }
 
-        /* Hidden sections for navigation */
-        .hidden {
-            display: none;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .beta-form {
+                flex-direction: column;
+            }
+            
+            .beta-input {
+                min-width: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Zazzy AI</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#beta">Join Beta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <div class="nav-container">
-                <a href="#" class="logo" onclick="showSection('home')">
-                    <i class="fas fa-robot"></i>
-                    Zazzy AI
-                </a>
-                <ul class="nav-links">
-                    <li><a onclick="showSection('home')">Home</a></li>
-                    <li><a onclick="showSection('services')">Services</a></li>
-                    <li><a onclick="showSection('about')">About</a></li>
-                    <li><a onclick="showSection('contact')">Contact</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="hero-content">
+                <h1>Take Control of Your Money</h1>
+                <p>Your intelligent personal finance companion that makes budgeting simple, intuitive, and actually helpful. Get the clarity and confidence you need to build better financial habits.</p>
+                <a href="#beta" class="cta-button">Join Beta Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Intelligent Financial Management</h2>
+            <p class="section-subtitle">Finally, personal finance that makes sense. Stop feeling overwhelmed by complicated budgeting apps.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💳</div>
+                    <h3>Automated Tracking</h3>
+                    <p>Connect your bank accounts securely and watch as transactions are automatically captured in real-time. No manual entry required.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Smart Categorization</h3>
+                    <p>Your spending is automatically sorted into meaningful categories like groceries, rent, and subscriptions to reveal patterns.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3>Personal Insights</h3>
+                    <p>Get instant snapshots of your financial habits with easy-to-understand visualizations and actionable recommendations.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Bank-Level Security</h3>
+                    <p>Your data is protected with enterprise-grade encryption. We never store your login credentials.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Coaching</h3>
+                    <p>Coming soon: Personalized financial guidance that adapts to your unique situation and goals.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Goal Tracking</h3>
+                    <p>Coming soon: Set and track progress toward important milestones like emergency funds and debt payoff.</p>
                 </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Home Section -->
-    <div id="home" class="page-section">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content fade-in-up">
-                    <h1>Welcome to Zazzy AI</h1>
-                    <p>Transform your business with intelligent automation solutions. We help eliminate mundane tasks so you can focus on what truly matters.</p>
-                    <a href="#" class="cta-button" onclick="showSection('services')">Explore Our Services</a>
+    <!-- How It Works -->
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to financial clarity</p>
+            
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Connect Securely</h3>
+                    <p>Link your bank accounts through our secure, encrypted platform in just a few clicks.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Services Preview -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Cutting-edge AI automation solutions tailored to your business needs</p>
-                <div class="services-grid">
-                    <div class="service-card fade-in-up">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Process Automation</h3>
-                        <p>Streamline your workflows with intelligent automation that handles repetitive tasks, reducing errors and increasing efficiency across your organization.</p>
-                    </div>
-                    <div class="service-card fade-in-up">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Data Analytics</h3>
-                        <p>Unlock insights from your data with AI-powered analytics that provide actionable intelligence for better decision-making and strategic planning.</p>
-                    </div>
-                    <div class="service-card fade-in-up">
-                        <div class="service-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3>Customer Support</h3>
-                        <p>Enhance customer experience with intelligent chatbots and automated support systems that provide 24/7 assistance and quick resolution.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Services Section -->
-    <div id="services" class="page-section hidden">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Comprehensive AI Solutions</h2>
-                <p class="section-subtitle">From simple task automation to complex AI integrations, we've got you covered</p>
                 
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Intelligent Automation</h3>
-                        <p>Deploy smart bots that learn and adapt to your business processes, handling everything from data entry to complex decision-making workflows.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Machine Learning</h3>
-                        <p>Leverage advanced ML algorithms to predict trends, optimize operations, and make data-driven decisions that drive business growth.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Computer Vision</h3>
-                        <p>Implement visual recognition systems for quality control, inventory management, and automated monitoring solutions.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <h3>Natural Language Processing</h3>
-                        <p>Transform unstructured text data into valuable insights with sentiment analysis, document processing, and content generation.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Cloud Integration</h3>
-                        <p>Seamlessly integrate AI solutions with your existing cloud infrastructure for scalable and reliable automation.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Security & Compliance</h3>
-                        <p>Ensure your automated systems meet industry standards with built-in security protocols and compliance monitoring.</p>
-                    </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Watch & Learn</h3>
+                    <p>See your spending automatically categorized and analyzed in real-time with no effort from you.</p>
+                </div>
+                
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Take Action</h3>
+                    <p>Get personalized insights and recommendations to improve your financial health and build better habits.</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <div id="about" class="page-section hidden">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">About Zazzy AI</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>At Zazzy AI, we believe that artificial intelligence should empower businesses to achieve more by doing less manual work. Founded with the vision of making AI accessible and practical for businesses of all sizes, we specialize in creating custom automation solutions that eliminate mundane, repetitive tasks.</p>
-                        
-                        <p>Our team of experienced AI engineers and data scientists work closely with clients to understand their unique challenges and develop tailored solutions that integrate seamlessly into existing workflows. From small startups to large enterprises, we've helped hundreds of organizations reclaim valuable time and resources.</p>
-                        
-                        <p>We're passionate about innovation and committed to delivering results that make a real difference in how our clients operate. Our approach combines cutting-edge technology with practical business sense, ensuring that every solution we deliver provides measurable value and return on investment.</p>
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Zazzy AI</h2>
+            
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3 style="color: #1e40af; margin-bottom: 1rem;">Making Personal Finance Accessible</h3>
+                    <p>At Zazzy AI, we believe that financial wellness shouldn't require a finance degree. Too many people struggle with money management not because they lack discipline, but because they lack clarity and the right tools.</p>
+                    <br>
+                    <p>We're on a mission to help individuals and families gain complete clarity over their income, spending, and financial habits through intelligent automation and personalized insights.</p>
+                    <br>
+                    <p>Unlike traditional budgeting apps that overwhelm you with features, we focus on what matters most: giving you clarity and confidence to make better financial decisions.</p>
+                </div>
+                
+                <div class="about-stats fade-in">
+                    <div class="stat">
+                        <div class="stat-number">89%</div>
+                        <div class="stat-label">Users Find Hidden Expenses</div>
                     </div>
-                    <div class="about-image">
-                        <i class="fas fa-lightbulb"></i>
+                    <div class="stat">
+                        <div class="stat-number">$300</div>
+                        <div class="stat-label">Average Monthly Savings</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Accuracy in Categorization</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Automatic Monitoring</div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- Contact Section -->
-    <div id="contact" class="page-section hidden">
-        <section class="section" style="padding-top: 120px; background: #f8fafc;">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Ready to transform your business with AI automation? Let's discuss your needs.</p>
-                
-                <form class="contact-form" action="YOUR_FORM_ACTION_URL_HERE" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your automation needs..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+    <!-- Beta Section -->
+    <section id="beta" class="section beta">
+        <div class="container">
+            <h2 class="section-title">Join the Beta</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">Be among the first to experience smarter financial management. Limited spots available.</p>
+            
+            <div class="beta-form">
+                <input type="email" class="beta-input" placeholder="Enter your email address" id="betaEmail">
+                <button class="beta-button" onclick="joinBeta()">Request Access</button>
             </div>
-        </section>
-    </div>
+            
+            <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">Free during beta • No credit card required • Cancel anytime</p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -591,101 +549,102 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zazzy AI</h3>
-                    <p>Transforming businesses through intelligent automation solutions. Making AI work for you.</p>
+                    <p>Your intelligent personal finance companion for smarter money decisions.</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <p><a href="#" onclick="showSection('services')">Process Automation</a></p>
-                    <p><a href="#" onclick="showSection('services')">Data Analytics</a></p>
-                    <p><a href="#" onclick="showSection('services')">Machine Learning</a></p>
+                    <h3>Product</h3>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#beta">Beta Access</a>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#about">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Email: info@Zazzyai.com</p>
-                    <p>Phone: +1 (888) 123-4567</p>
-                    <p><a href="#" onclick="showSection('contact')">Get In Touch</a></p>
+                    <a href="mailto:hello@zazzy-ai.com">hello@zazzy-ai.com</a>
+                    <a href="mailto:beta@zazzy-ai.com">beta@zazzy-ai.com</a>
+                    <a href="mailto:support@zazzy-ai.com">support@zazzy-ai.com</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Zazzy AI. All rights reserved. | Built with passion for automation</p>
+                <p>&copy; 2025 Zazzy AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Navigation functionality
-        function showSection(sectionName) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => {
-                section.classList.add('hidden');
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
-            
-            // Show selected section
-            const targetSection = document.getElementById(sectionName);
-            if (targetSection) {
-                targetSection.classList.remove('hidden');
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Beta signup functionality
+        function joinBeta() {
+            const email = document.getElementById('betaEmail').value;
+            if (email && email.includes('@')) {
+                alert('Thank you for your interest! We\'ll notify you when beta access becomes available.');
+                document.getElementById('betaEmail').value = '';
+            } else {
+                alert('Please enter a valid email address.');
             }
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
         }
 
-        // Smooth scrolling for CTA button
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add fade-in animation on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all service cards
-            const cards = document.querySelectorAll('.service-card');
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s ease';
-                observer.observe(card);
-            });
-
-            // Form submission handling
-            const contactForm = document.querySelector('.contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    // You can add custom form validation here if needed
-                    // The form will submit normally to your specified action URL
-                });
+        // Handle Enter key in beta form
+        document.getElementById('betaEmail').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                joinBeta();
             }
         });
 
-        // Mobile menu toggle (for future enhancement)
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', function() {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
-        }
-
-        // Add navbar scroll effect
+        // Header background on scroll
         window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(255, 255, 255, 0.98)';
-                nav.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(30, 58, 138, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
             } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)';
+                header.style.backdropFilter = 'none';
             }
         });
     </script>

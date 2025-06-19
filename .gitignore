@@ -7,6 +7,9 @@ yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
 
+# Misc testing
+index_aithon.html
+
 # Firebase cache
 .firebase/
 
